@@ -1,14 +1,23 @@
+package p2;
 
 public class MainClass {
- public static void main(String args[])
- {
-	 First f1 = new Second(2,3,4);
-	 f1.display(); // executes the display function of second class
-	 //f1.anotherF();//error
-	 Second s1 = new Second(3,4,5);
-	 s1.display();
-	 s1.anotherF();
-	 
- }
-	
+	public static void main(String arg[])
+	{
+		Rectangle r = new Rectangle(5,6);
+		r.getArea();
+		r.print();
+		Traingle t = new Traingle(2,3);
+		//Parent Class ShapeClass
+		//Traingle is inherited Class 
+		//Dynamic Memory Dispatch
+		ShapeClass s = new Traingle(3,4);
+		System.out.println(s.d1+" "+s.d2);
+		s.getArea(); // of the traingle class
+		s.print();
+		s = new Rectangle(2,4); 
+		Cuboid c = new Cuboid(5,6,2);
+		c.getArea();
+		c.print();
+	}
+
 }
